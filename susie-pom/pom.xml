@@ -8,6 +8,7 @@
 	<modules>
 		<module>susie-api</module>
 		<module>susie-web</module>
+		<module>susie-learn</module>
 	</modules>
 	
 	<!-- jar包冲突 -->
