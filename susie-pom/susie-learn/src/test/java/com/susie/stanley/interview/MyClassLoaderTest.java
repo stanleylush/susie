@@ -3,10 +3,12 @@ package com.susie.stanley.interview;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 public class MyClassLoaderTest {
 
+	@Ignore
 	@Test
 	public void test() {
 		

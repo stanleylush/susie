@@ -1,5 +1,6 @@
 package com.susie.stanley.interview;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 public class MemoryTest {
@@ -7,6 +8,7 @@ public class MemoryTest {
 	/**
 	 * 内存溢出
 	 */
+	@Ignore
 	@Test
 	public void test(){
 		String str = "";

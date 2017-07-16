@@ -3,10 +3,12 @@ package com.susie.stanley.thinking.typeinfo;
 import java.util.Arrays;
 import java.util.List;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 import com.susie.stanley.thinking.typeinfo.classobj.ToyTest;
 
+@Ignore
 public class TypeInfoTest {
 
 	/**
