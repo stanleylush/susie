@@ -14,6 +14,21 @@
 	<!-- jar包冲突 -->
 	<dependencyManagement>
 		<dependencies>
+			<!-- Override Spring Data release train provided by Spring Boot -->
+	        <dependency>
+	            <groupId>org.springframework.data</groupId>
+	            <artifactId>spring-data-releasetrain</artifactId>
+	            <version>Fowler-SR2</version>
+	            <scope>import</scope>
+	            <type>pom</type>
+	        </dependency>
+	        <dependency>
+	            <groupId>org.springframework.boot</groupId>
+	            <artifactId>spring-boot-dependencies</artifactId>
+	            <version>1.4.2.RELEASE</version>
+	            <type>pom</type>
+	            <scope>import</scope>
+	        </dependency>
 			<dependency>
 			    <groupId>junit</groupId>
 			    <artifactId>junit</artifactId>
@@ -31,11 +46,11 @@
 	<distributionManagement>
 		<repository>
 			<id>deploymentRepo</id>
-			<url>http://127.0.0.1:8081/nexus/content/repositories/release</url>
+			<url>http://192.168.1.104:8081/nexus/content/repositories/release</url>
 		</repository>
 		<snapshotRepository>
 			<id>snapshots</id>
-			<url>http://127.0.0.1:8081/nexus/content/repositories/snapshots</url>
+			<url>http://192.168.1.104:8081/nexus/content/repositories/snapshots</url>
 		</snapshotRepository>
 	</distributionManagement>
 	<build>
@@ -51,6 +66,10 @@
 					<encoding>UTF-8</encoding>
 				</configuration>
 			</plugin>
+			<plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
 		</plugins>
 	</build>
 </project>
