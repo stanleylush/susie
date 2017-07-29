@@ -9,7 +9,7 @@ import java.sql.SQLException;
 import java.util.Properties;
 import java.util.Vector;
 
-public class MyPoolImpl implements MyPool {
+public class DbPoolImpl implements DbPool {
 	
 	private static String jdbcDriver="";
 	private static String jdbcUrl="";
@@ -20,12 +20,12 @@ public class MyPoolImpl implements MyPool {
 	private static int poolMaxSize;
 	// 连接池管道集合
 	private static Vector<DbConnection> dbConnectionPool = new Vector<DbConnection>();
-	MyPoolImpl(){
+	DbPoolImpl(){
 		// 初始化参数
 		init();
 	}
 	private void init() {
-		InputStream in = MyPoolImpl.class.getClassLoader().getResourceAsStream("db.properties");
+		InputStream in = DbPoolImpl.class.getClassLoader().getResourceAsStream("db.properties");
 		Properties properties = new Properties();
 		try {
 			properties.load(in);

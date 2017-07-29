@@ -1,6 +1,9 @@
 package com.susie.stanleylus;
 
 import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 public class DbConnection {
 	// 封装JDK提供管道对象
@@ -16,6 +19,20 @@ public class DbConnection {
 	public void close(){
 		this.isBusy = false;
 	}
+	
+	public ResultSet queryBySql(String sql){
+		ResultSet rs = null;
+		Statement sm = null;
+		
+		try {
+			sm = this.connection.createStatement();
+			rs = sm.executeQuery(sql);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return rs;
+	}
+	
 	public Connection getConnection() {
 		return connection;
 	}

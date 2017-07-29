@@ -1,6 +1,6 @@
 package com.susie.stanleylus;
 
-public interface MyPool {
+public interface DbPool {
 	
 	public DbConnection getConnection();
 	
