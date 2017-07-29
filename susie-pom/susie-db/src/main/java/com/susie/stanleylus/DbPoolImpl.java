@@ -20,10 +20,12 @@ public class DbPoolImpl implements DbPool {
 	private static int poolMaxSize;
 	// 连接池管道集合
 	private static Vector<DbConnection> dbConnectionPool = new Vector<DbConnection>();
+	
 	DbPoolImpl(){
 		// 初始化参数
 		init();
 	}
+	
 	private void init() {
 		InputStream in = DbPoolImpl.class.getClassLoader().getResourceAsStream("db.properties");
 		Properties properties = new Properties();
@@ -53,6 +55,7 @@ public class DbPoolImpl implements DbPool {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
+		createConnection(stepSize);
 	}
 	@Override
 	public DbConnection getConnection() {
