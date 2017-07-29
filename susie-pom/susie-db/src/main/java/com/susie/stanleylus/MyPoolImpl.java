@@ -10,9 +10,9 @@ public class MyPoolImpl implements MyPool {
 	private static String jdbcUrl="";
 	private static String userName="";
 	private static String password="";
-	private static String initCount="";
-	private static String stepSize="";
-	private static String poolMaxSize="";
+	private static int initCount;
+	private static int stepSize;
+	private static int poolMaxSize;
 
 	MyPoolImpl(){
 		// 初始化参数
@@ -30,9 +30,9 @@ public class MyPoolImpl implements MyPool {
 		this.jdbcUrl = properties.getProperty("jdbcUrl");
 		this.userName = properties.getProperty("userName");
 		this.password = properties.getProperty("password");
-		this.initCount = properties.getProperty("initCount");
-		this.stepSize = properties.getProperty("stepSize");
-		this.poolMaxSize = properties.getProperty("poolMaxSize");
+		this.initCount = Integer.valueOf(properties.getProperty("initCount"));
+		this.stepSize = Integer.valueOf(properties.getProperty("stepSize"));
+		this.poolMaxSize = Integer.valueOf(properties.getProperty("poolMaxSize"));
 	}
 	@Override
 	public DbConnection getConnection() {
