@@ -9,10 +9,9 @@ public class DbPoolTest {
 	
 	private static DbPoolImpl pool = DbPoolManager.getInstance();
 	
-	@Test
 	public synchronized static void selectData(){
 		DbConnection conn = pool.getConnection();
-		ResultSet rSet = conn.queryBySql("select * from user");
+		ResultSet rSet = conn.queryBySql("select * from acc_earn_type");
 		try {
 			while(rSet.next()){
 				System.out.println(rSet.getString(""));
@@ -20,6 +19,10 @@ public class DbPoolTest {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
+	}
+	
+	public static void main(String[] args){
+		selectData();
 	}
 	
 }
