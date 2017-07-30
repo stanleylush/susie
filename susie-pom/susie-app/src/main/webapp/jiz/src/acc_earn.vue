@@ -41,7 +41,7 @@
 <script>  
     module.exports = {
         data:{  
-            totalAmount:''，
+            totalAmount:'',
             earnWx:'',
             earnZfb:'',
             earnCard:'',

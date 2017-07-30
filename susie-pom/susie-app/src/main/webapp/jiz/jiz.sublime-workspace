@@ -3,15 +3,37 @@
 	{
 		"selected_items":
 		[
+			[
+				"on",
+				"onChange"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"in",
+				"input\tTag"
+			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "src/foo.vue",
+			"file": "src/acc.vue",
 			"settings":
 			{
-				"buffer_size": 601,
+				"buffer_size": 4809,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/acc_earn.vue",
+			"settings":
+			{
+				"buffer_size": 4134,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		}
@@ -48,13 +70,15 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/lu/mycode/code/susie/susie-pom/susie-app/src/main/webapp/jiz",
-		"/Users/lu/mycode/code/susie/susie-pom/susie-app/src/main/webapp/jiz/assets",
-		"/Users/lu/mycode/code/susie/susie-pom/susie-app/src/main/webapp/jiz/build",
-		"/Users/lu/mycode/code/susie/susie-pom/susie-app/src/main/webapp/jiz/src"
+		"/Users/lu/mycode/code/susie/susie-pom/susie-app/src/main/webapp/jiz"
 	],
 	"file_history":
 	[
+		"/Users/lu/mycode/code/susie/susie-pom/susie-app/src/main/webapp/jiz/src/login.vue",
+		"/Users/lu/mycode/code/susie/susie-pom/susie-app/src/main/webapp/jiz/src/name.vue",
+		"/Users/lu/mycode/code/susie/susie-pom/susie-app/src/main/webapp/jiz/src/acc.we",
+		"/Users/lu/mycode/code/susie/susie-pom/susie-app/src/main/webapp/jiz/src/home.we",
+		"/Users/lu/mycode/code/susie/susie-pom/susie-app/src/main/webapp/jiz/src/input.we",
 		"/Users/lu/Library/Application Support/Sublime Text 3/Packages/User/Package Control.cache/Plain we.sublime-syntax",
 		"/Users/lu/Downloads/Plain+we.sublime-syntax",
 		"/Users/lu/Library/Application Support/Sublime Text 3/Packages/User/Plain we.sublime-syntax.yaml",
@@ -77,7 +101,7 @@
 	],
 	"find":
 	{
-		"height": 25.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
@@ -91,6 +115,12 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"<tr",
+			"</tr>",
+			"</td>",
+			"<td",
+			"<tr style=\"font-size:45px;\">",
+			"acc-text",
 			"script"
 		],
 		"highlight": true,
@@ -109,34 +139,64 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "src/foo.vue",
-					"semi_transient": true,
+					"file": "src/acc.vue",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 601,
+						"buffer_size": 4809,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								4082,
+								4082
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"syntax": "Packages/User/Package Control.cache/Plain we.sublime-syntax",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1769.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/acc_earn.vue",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4134,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2065,
+								2065
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/User/Package Control.cache/Plain we.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 746.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -151,7 +211,7 @@
 	},
 	"input":
 	{
-		"height": 0.0
+		"height": 33.0
 	},
 	"layout":
 	{
