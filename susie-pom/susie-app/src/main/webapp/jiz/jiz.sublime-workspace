@@ -1,0 +1,230 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "src/foo.vue",
+			"settings":
+			{
+				"buffer_size": 601,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/lu/mycode/code/susie/susie-pom/susie-app/src/main/webapp/jiz",
+		"/Users/lu/mycode/code/susie/susie-pom/susie-app/src/main/webapp/jiz/assets",
+		"/Users/lu/mycode/code/susie/susie-pom/susie-app/src/main/webapp/jiz/build",
+		"/Users/lu/mycode/code/susie/susie-pom/susie-app/src/main/webapp/jiz/src"
+	],
+	"file_history":
+	[
+		"/Users/lu/Library/Application Support/Sublime Text 3/Packages/User/Package Control.cache/Plain we.sublime-syntax",
+		"/Users/lu/Downloads/Plain+we.sublime-syntax",
+		"/Users/lu/Library/Application Support/Sublime Text 3/Packages/User/Plain we.sublime-syntax.yaml",
+		"/Users/lu/mycode/code/SpringVue-Starter-master/frontend/src/components/Hello.vue",
+		"/Users/lu/mycode/weex/chargeAccount/src/foo.vue",
+		"/Users/lu/mycode/nwapp/susie/package.json",
+		"/Users/lu/mycode/nwapp/susie/index.html",
+		"/Users/lu/mycode/nwjs0/node_modules/nw/README.md",
+		"/Users/lu/mycode/nwjs0/package.json",
+		"/Users/lu/mycode/nwjs/package.json",
+		"/Users/lu/mycode/weex/hackernews/src/router.js",
+		"/Users/lu/mycode/weex/hackernews/src/entry.js",
+		"/Users/lu/mycode/susieweex/package.json",
+		"/Users/lu/Downloads/刷单程序/程序配置文件说明.docx",
+		"/Users/lu/文稿/mydoc/面试/面试",
+		"/Users/lu/mycode/code/susieierp/src/main/resources/log4j.properties",
+		"/Users/su/Documents/workspace/common/pom.xml",
+		"/Users/lu/文稿/mycode/susieierp/README.md",
+		"/Users/lu/文稿/mycode/susieierp/read me"
+	],
+	"find":
+	{
+		"height": 25.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"script"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "src/foo.vue",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 601,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "jiz.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 209.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
