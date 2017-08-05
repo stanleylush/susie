@@ -1,4 +1,4 @@
-package com.susie.stanley.word.test;
+package com.susie.stanley.work.test;
 
 import java.util.ArrayList;
 import java.util.List;
