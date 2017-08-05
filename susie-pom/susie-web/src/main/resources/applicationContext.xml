@@ -11,74 +11,74 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
 		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
-	
-	<context:annotation-config />
-	<context:component-scan base-package="com.susie.ierp" />
-	
-	<bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">  
-		<property name="locations">  
-			<list>  
-                 <value>classpath*:dbconfig.properties</value>  
+	<!-- 加载properties文件 -->
+	<bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+                 <value>classpath*:dbconfig.properties</value>
                  <value>classpath*:redis.properties</value>
-            </list>  
-        </property>  
+            </list>
+        </property>
 	</bean>
-	
+	<!-- 配置数据源 -->
 	<bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close"> 
 	    <property name="url" value="${jdbc_url}" />
 	    <property name="username" value="${jdbc_user}" />
 	    <property name="password" value="${jdbc_password}" />
-	
 	    <property name="filters" value="stat" />
-	
 	    <property name="maxActive" value="20" />
 	    <property name="initialSize" value="1" />
 	    <property name="maxWait" value="60000" />
 	    <property name="minIdle" value="1" />
-	
 	    <property name="timeBetweenEvictionRunsMillis" value="60000" />
 	    <property name="minEvictableIdleTimeMillis" value="300000" />
-	
 	    <property name="testWhileIdle" value="true" />
 	    <property name="testOnBorrow" value="false" />
 	    <property name="testOnReturn" value="false" />
-	
 	    <property name="poolPreparedStatements" value="true" />
 	    <property name="maxOpenPreparedStatements" value="20" />
 	</bean>
-	
-	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">  
-		<property name="dataSource" ref="dataSource" />  
+	<!-- 配置事务管理器 -->
+	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource" />
 	</bean>
-
+	<!-- 配置 使用注解声明事务 -->
 	<tx:annotation-driven transaction-manager="transactionManager"/>
 	
-	<!-- spring和MyBatis完美整合，不需要mybatis的配置映射文件 -->
-	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+	<!-- MyBatis Configuration -->
+	<!-- Spring整合MyBatis -->
+	<!-- <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 	    <property name="dataSource" ref="dataSource" />
-	    <!-- 自动扫描mapping.xml文件，**表示迭代查找 -->
-	    <property name="mapperLocations" value="classpath:com/susie/ierp/mybatis/*.xml" />
+	    加载mybatis属性（缓存，延迟加载等等）
+	    <property name="configLocation" value="classpath:mybatisContext.xml" />
+	    自动扫描mapping.xml文件，**表示迭代查找
+	    <property name="mapperLocations" value="classpath:com/susie/ierp/**/*.xml" />
 	</bean>
-	
-	<!-- DAO接口所在包名，Spring会自动查找其下的类 ,包下的类需要使用@MapperScan注解,否则容器注入会失败 -->
+	扫描DAO接口所在包名
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-	    <property name="basePackage" value="com.susie.ierp.mybatis" />
+	    <property name="basePackage" value="com.susie.ierp.*" />
 	    <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" />
-	</bean>
-	
-	<!-- redis configuration -->
+	</bean> -->
+
+	<!-- Redis Configuration -->
 	<!-- redis数据源 -->
-	<bean id="jedisPoolConfig" class="redis.clients.jedis.JedisPoolConfig">
+	<!-- <bean id="poolConfig" class="redis.clients.jedis.JedisPoolConfig">
 	    <property name="maxIdle" value="${redis.maxIdle}" />
 	    <property name="maxTotal" value="${redis.maxActive}" />
 	    <property name="maxWaitMillis" value="${redis.maxWait}" />
 	    <property name="testOnBorrow" value="${redis.testOnBorrow}" />
 	</bean>
-	<!-- Spring-redis连接池管理工厂 -->
+	session save into resid
+	<bean id="redisHttpSessionConfiguration" 
+		class="org.springframework.session.data.redis.config.annotation.web.http.RedisHttpSessionConfiguration">
+		<property name="maxInactiveIntervalInSeconds" value="1800"></property>
+	</bean>
+	Spring-redis连接池管理工厂
 	<bean id="jedisConnectionFactory" class="org.springframework.data.redis.connection.jedis.JedisConnectionFactory"  
-	    p:host-name="${redis.host}" p:port="${redis.port}" p:password="${redis.pass}"  p:pool-config-ref="jedisPoolConfig"/>
-	<!-- 使用中间类解决RedisCache.jedisConnectionFactory的静态注入，从而使MyBatis实现第三方缓存 -->
-	<!-- <bean id="redisCacheTransfer" class="com.susie.ierp.cache.RedisCacheTransfer">
+	    p:host-name="${redis.host}" p:port="${redis.port}" p:password="${redis.pass}"  p:pool-config-ref="poolConfig"/>
+	使用中间类解决RedisCache.jedisConnectionFactory的静态注入，从而使MyBatis实现第三方缓存
+	<bean id="redisCacheTransfer" class="com.susie.ierp.cache.RedisCacheTransfer">
 	    <property name="jedisConnectionFactory" ref="jedisConnectionFactory"/>
 	</bean> -->
+	
 </beans>
