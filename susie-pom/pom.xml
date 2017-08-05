@@ -10,9 +10,9 @@
 		<module>susie-api</module>
 		<module>susie-web</module>
 		<module>susie-learn</module>
-    <module>susie-db</module>
-    <module>susie-app</module>
-  </modules>
+		<module>susie-db</module>
+		<module>susie-app</module>
+	</modules>
 	
 	<!-- jar包冲突 -->
 	<dependencyManagement>
