@@ -1,6 +1,6 @@
 package com.susie.stanley;
 
-import com.susit.staleylus.model.TestModel;
+import com.susie.stanley.model.TestModel;
 
 public interface TestInterface {
 	

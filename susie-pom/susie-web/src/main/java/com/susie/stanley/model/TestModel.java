@@ -1,4 +1,4 @@
-package com.susit.staleylus.model;
+package com.susie.stanley.model;
 
 public class TestModel {
 	
