@@ -18,7 +18,7 @@ public class SecKillOrder implements Serializable {
 	
 	@Id
     @GeneratedValue(generator = "PKUUID")
-    @Column(length = 36)
+    @Column(length = 20)
     private String id; // UUID.randomUUID().toString
 
     //用户名称

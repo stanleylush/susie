@@ -7,11 +7,9 @@ import org.springframework.transaction.annotation.Transactional;
 
 public interface SecKillGoodsDao extends JpaRepository<SecKillGoods,String>{
 
-    @Query("update SecKillGoods g set g.remainNum = g.remainNum - ?2 where g.id=?1")
+    @Query("update sec_goods g set g.remain_num = g.remain_num - ?2 where g.id=?1")
     @Modifying(clearAutomatically = true)
     @Transactional
     int reduceStock(String id,Integer remainNum);
-
-	SecKillGoods findOne(String goodsId);
 
 }

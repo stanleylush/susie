@@ -108,7 +108,6 @@
   		<plugin>
   			<groupId>org.apache.maven.plugins</groupId>
   			<artifactId>maven-deploy-plugin</artifactId>
-  			<version>2.8.2</version>
   			<configuration>
   				<!-- 部署后，将不需要上传到私服的包过滤掉 -->
   				<skip>true</skip>

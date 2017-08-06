@@ -1,15 +1,7 @@
 package com.susie.stanley.seckill;
 
-public class SecKillOrderDao {
+import org.springframework.data.jpa.repository.JpaRepository;
 
-	public void deleteAll() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	public void save(SecKillOrder secKillOrder) {
-		// TODO Auto-generated method stub
-		
-	}
+public interface SecKillOrderDao extends JpaRepository<SecKillOrder,String> {
 
 }
