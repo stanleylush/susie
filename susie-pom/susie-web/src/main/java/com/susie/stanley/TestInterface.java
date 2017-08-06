@@ -1,4 +1,4 @@
-package com.susit.staleylus;
+package com.susie.stanley;
 
 import com.susit.staleylus.model.TestModel;
 
