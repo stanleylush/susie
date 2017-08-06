@@ -5,18 +5,18 @@
   <artifactId>susie-pom</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
-  <parent>  
+  <!-- <parent>  
     <groupId>org.springframework.boot</groupId>    
     <artifactId>spring-boot-starter-parent</artifactId>  
     <version>1.5.6.RELEASE</version>  
-  </parent>
-	<modules>
+  </parent> -->
+  <modules>
 		<module>susie-api</module>
 		<module>susie-web</module>
 		<module>susie-learn</module>
 		<module>susie-db</module>
 		<module>susie-app</module>
-	</modules>
+  </modules>
 	
 	<!-- jar包冲突 -->
 	<dependencyManagement>
