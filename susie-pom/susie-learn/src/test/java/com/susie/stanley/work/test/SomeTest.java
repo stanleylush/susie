@@ -1,5 +1,7 @@
 package com.susie.stanley.work.test;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -37,6 +39,34 @@ public class SomeTest {
 		String a = "1";
 		System.out.println(a.equals("1"));
 		System.out.println(a.equals(null));
+	}
+	
+	@Test
+	public void testExceptionReturn(){
+		System.out.println(exceptionReturn2());
+	}
+	
+	private String exceptionReturnCatch(){
+		try {
+			FileInputStream file = new FileInputStream("a");
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+			return "return from catch";
+		}
+		return "1";
+	}
+	
+	private String exceptionReturn2(){
+		
+		String[] strs = new String[1];
+		strs[0] = "0";
+		try{
+			strs[1] = "1";
+		}catch(Exception e){
+			e.getStackTrace();
+		}
+		
+		return strs[0];
 	}
 
 }
