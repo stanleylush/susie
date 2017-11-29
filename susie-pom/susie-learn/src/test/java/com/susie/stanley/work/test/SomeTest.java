@@ -68,5 +68,11 @@ public class SomeTest {
 		
 		return strs[0];
 	}
+	
+	@Test
+	public void testIsNotBlank(){
+//		StringUtils
+//		System.out.println(StringUtils.);
+	}
 
 }
